@@ -1,0 +1,149 @@
+// Desktop
+.navbar {
+  background-color: transparent;
+  // box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 40px 7rem;
+}
+
+.navbar a > img {
+  width: 10rem;
+  margin: 5px;
+}
+.burger {
+  border: 0;
+  cursor: pointer;
+  display: none;
+  font-size: 22px;
+  position: relative;
+  padding: 0;
+  outline: none;
+  height: 30px;
+  width: 30px;
+  background-color: transparent;
+}
+
+.burger:active {
+  color: $White;
+  outline: none;
+}
+
+.burger .bar {
+  background-color: $White;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  height: 3px;
+  width: 20px;
+  transition: transform 0.2s ease;
+}
+
+.burger .bar:first-of-type {
+  top: 40%;
+}
+
+.burger .bar:last-of-type {
+  top: 60%;
+}
+.nav-links {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.nav-links .nav-link {
+  margin: 0 10px;
+}
+
+.nav-links .nav-link a {
+  color: $White;
+  position: relative;
+  text-decoration: none;
+}
+
+.nav-links li a::after {
+  content: "";
+  background-color: $White;
+  position: absolute;
+  bottom: -18px;
+  left: 12px;
+  opacity: 0;
+  height: 2px;
+  margin: 0 auto;
+  width: 40%;
+  transition: transform 0.2s ease;
+}
+ul li a:hover::after {
+  opacity: 1;
+  transform: translateY(-15px);
+}
+
+// Mobile
+
+@media screen and (max-width: 800px) {
+  .navbar {
+    background-color: $Black;
+    padding: 15px;
+  }
+  .navbar a > img {
+    width: 10rem;
+    margin: 5px;
+  }
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    text-align: start;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .nav-links .nav-link {
+    margin: 0 24px;
+    padding: 2rem 0;
+    text-align: start;
+  }
+
+  .nav-links .nav-link a {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: $White;
+    position: relative;
+    text-decoration: none;
+  }
+  .burger {
+    display: block;
+  }
+
+  .burger.show-x .bar:first-of-type {
+    transform: translate(-50%, 50%) rotate(225deg);
+  }
+
+  .burger.show-x .bar:last-of-type {
+    transform: translate(-50%, -150%) rotate(-225deg);
+  }
+
+  .nav-links {
+    background-color: $Black;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    text-align: start;
+    position: fixed;
+    top: 58px;
+    left: 0%;
+    transform: translateX(120%);
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease-in;
+    z-index: 100;
+  }
+
+  ul.show {
+    transform: translateX(0);
+  }
+}

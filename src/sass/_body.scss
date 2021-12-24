@@ -1,0 +1,474 @@
+// Essentials
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+img {
+  width: 100%;
+}
+.wrapper {
+  width: 90%;
+  max-width: 122.5rem;
+  margin: 50px auto;
+  padding: 0 1.4rem;
+}
+
+// Start here - Mobile first
+.main-section {
+  background-image: url("../images/mobile/image-hero.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    width: 100%;
+    height: 80vh;
+  }
+  .main-title {
+    border: 3px solid #ddd;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin: 20vh 0 10rem 3rem;
+    width: 100%;
+    h1 {
+      font-family: "Josefin Sans", sans-serif;
+      color: $White;
+      font-weight: 300;
+      text-transform: uppercase;
+      font-size: 2rem;
+      padding: 0 20px;
+    }
+  }
+}
+
+.section1 {
+  display: flex;
+  flex-direction: column;
+  .left {
+    background: url("../images/mobile/image-interactive.jpg") no-repeat center
+      center / cover;
+    width: 100%;
+    height: 200px;
+  }
+  .right {
+    width: 100%;
+    margin: 0;
+    margin-top: 20px;
+  }
+  .right h1 {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 32px;
+    padding: 1rem 1rem 0.3rem;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+    color: $Black;
+  }
+  .right p {
+    font-weight: 500;
+    text-align: center;
+    line-height: 25px;
+    color: $DarkGray;
+  }
+}
+
+// Section 2 starts
+.section2 {
+  .title-and-btn {
+    display: flex;
+    justify-content: space-between;
+    margin: 4rem auto;
+
+    h1 {
+      font-family: "Josefin Sans", sans-serif;
+      color: $Black;
+      text-transform: uppercase;
+      font-size: 2rem;
+      text-align: center;
+      margin: auto;
+    }
+    .see-all-btn-one {
+      border: 2px solid $Black;
+      background-color: $White;
+      color: $Black;
+      padding: 14px 50px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      margin: auto 0;
+    }
+  }
+  .img-row-1,
+  .img-row-2 {
+    display: flex;
+    /* Put a card in the next row when previous cards take all width */
+    flex-wrap: wrap;
+  }
+  .img-row-1 > *,
+  .img-row-2 > * {
+    flex-basis: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: 0.7rem auto;
+    // height: 240px;
+    padding-left: 2rem;
+  }
+  .col-img {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120px;
+  }
+  .col-1 {
+    background-image: url("../images/mobile/image-deep-earth.jpg");
+  }
+  .col-2 {
+    background-image: url("../images/mobile/image-night-arcade.jpg");
+  }
+  .col-3 {
+    background-image: url("../images/mobile/image-soccer-team.jpg");
+  }
+  .col-4 {
+    background-image: url("../images/mobile/image-grid.jpg");
+  }
+  .col-5 {
+    background-image: url("../images/mobile/image-from-above.jpg");
+  }
+  .col-6 {
+    background-image: url("../images/mobile/image-pocket-borealis.jpg");
+  }
+  .col-7 {
+    background-image: url("../images/mobile/image-curiosity.jpg");
+  }
+  .col-8 {
+    background-image: url("../images/mobile/image-fisheye.jpg");
+  }
+  h2 {
+    color: $White;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin: 4rem 0.3rem 1px 0.1rem;
+  }
+  .see-all-btn-two {
+    border: 2px solid $Black;
+    background-color: $White;
+    color: $Black;
+    text-align: center;
+    padding: 14px 50px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    width: 200px;
+    margin: 1.5rem auto;
+  }
+  .see-all-btn-two:focus {
+    background-color: $Black;
+    color: $White;
+  }
+}
+@media (max-width: 800px) {
+  .footer {
+    background-color: $Black;
+    margin-top: 10%;
+    padding: 4rem 1rem;
+    height: auto;
+    width: 100%;
+    .brand {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 0 auto;
+    }
+    .brand a > img {
+      width: 10rem;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+    .socials {
+      display: none;
+    }
+
+    .footer-navbar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin: 1rem auto;
+    }
+    .footer-navbar a {
+      color: white;
+      font-weight: 300;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-align: center;
+    }
+    .socials-2 {
+      display: flex;
+      justify-content: center;
+      margin: 1rem auto;
+      a {
+        margin: 0 6px;
+      }
+    }
+    .copyright {
+      text-align: center;
+      color: $DarkGray;
+    }
+  }
+  .see-all-btn-one {
+    display: none;
+  }
+  .see-all-btn-two {
+    display: block;
+  }
+}
+// Footer
+
+@media (min-width: 768px) {
+  // Desktop
+  .main-section {
+    background-image: url("../images/desktop/image-hero.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+
+    .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: start;
+      width: 50%;
+      height: 80vh;
+      .main-title {
+        border: 3px solid #ddd;
+        padding: 60px 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        h1 {
+          font-family: "Josefin Sans", sans-serif;
+          color: $White;
+          font-weight: 300;
+          text-transform: uppercase;
+          font-size: 3.2rem;
+          letter-spacing: 0.4rem;
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+  // Section 1 start
+  .section1 {
+    .wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .left {
+        width: 100rem;
+        height: 600px;
+        background: url("../images/desktop/image-interactive.jpg") no-repeat
+          center / cover;
+      }
+      .right {
+        width: 70%;
+        min-height: 300px;
+        background-color: white;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        padding: 30px 50px;
+        margin-top: 300px;
+        margin-left: -150px;
+      }
+      .right h1 {
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 40px;
+        font-weight: 300;
+        text-align: start;
+        text-transform: uppercase;
+        color: $Black;
+        margin-bottom: 10px;
+      }
+      .right p {
+        // margin: 20px auto;
+        font-weight: 500;
+        line-height: 25px;
+        color: $DarkGray;
+      }
+    }
+  }
+  // Section 1 ends
+
+  // Section 2 starts
+  .section2 {
+    .title-and-btn {
+      display: flex;
+      justify-content: space-between;
+      margin: 4rem auto;
+
+      h1 {
+        font-family: "Josefin Sans", sans-serif;
+        color: $Black;
+        text-transform: uppercase;
+        font-size: 2rem;
+        margin: auto 0;
+      }
+      .see-all-btn-one {
+        border: 2px solid $Black;
+        background-color: $White;
+        color: $Black;
+        padding: 14px 50px;
+        font-size: 16px;
+        cursor: pointer;
+        text-decoration: none;
+        margin: auto 0;
+      }
+      .see-all-btn-one:hover,
+      .see-all-btn-one:focus {
+        background-color: $Black;
+        color: $White;
+      }
+    }
+    .img-row-1,
+    .img-row-2 {
+      display: flex;
+      /* Put a card in the next row when previous cards take all width */
+      flex-wrap: wrap;
+    }
+    .img-row-1 > *,
+    .img-row-2 > * {
+      flex-basis: 23%;
+      padding-left: 8px;
+      padding-right: 8px;
+      margin: 1rem auto;
+      height: 500px;
+      padding-left: 3rem;
+    }
+    .col-img {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .col-1 {
+      background-image: url("../images/desktop/image-deep-earth.jpg");
+    }
+    .col-2 {
+      background-image: url("../images/desktop/image-night-arcade.jpg");
+    }
+    .col-3 {
+      background-image: url("../images/desktop/image-soccer-team.jpg");
+    }
+    .col-4 {
+      background-image: url("../images/desktop/image-grid.jpg");
+    }
+    .col-5 {
+      background-image: url("../images/desktop/image-from-above.jpg");
+    }
+    .col-6 {
+      background-image: url("../images/desktop/image-pocket-borealis.jpg");
+    }
+    .col-7 {
+      background-image: url("../images/desktop/image-curiosity.jpg");
+    }
+    .col-8 {
+      background-image: url("../images/desktop/image-fisheye.jpg");
+    }
+    h2 {
+      color: $White;
+      font-family: "Josefin Sans", sans-serif;
+      font-family: 300;
+      text-transform: uppercase;
+      margin-top: 26rem;
+    }
+    .see-all-btn-two {
+      display: none;
+    }
+  }
+  // Footer
+  .footer {
+    background-color: $Black;
+    padding: 2rem 10rem;
+    margin-top: 10%;
+    height: auto;
+    width: 100%;
+    .row-1,
+    .row-2 {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 1rem;
+    }
+    .brand a > img {
+      width: 10rem;
+      margin-left: 12px;
+      cursor: pointer;
+    }
+    .socials {
+      display: flex;
+
+      a {
+        margin: 0 6px;
+      }
+      a::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background: $White;
+        transition: width 0.3s;
+        margin: 3px auto;
+      }
+      a:hover::after {
+        text-align: center;
+        width: 40%;
+      }
+    }
+    .socials-2 {
+      display: none;
+    }
+    .footer-navbar {
+      display: flex;
+    }
+    .footer-navbar a {
+      color: white;
+      font-weight: 300;
+      padding: 14px 20px;
+      text-decoration: none;
+      text-align: center;
+    }
+    .footer-nav-link::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 2px;
+      background: $White;
+      transition: width 0.3s;
+      margin: 3px auto;
+    }
+    .footer-nav-link:hover::after {
+      text-align: center;
+      width: 40%;
+    }
+    .copyright {
+      color: $DarkGray;
+    }
+  }
+}
